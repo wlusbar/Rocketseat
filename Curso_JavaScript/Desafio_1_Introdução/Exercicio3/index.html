@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <script>
+        function temHabilidade(skills) {
+            let naoTem = "false";
+            for (var i = 0; i <= skills.length; i++) {
+                if (skills[i] == "Javascript") {
+                    naoTem = "true";
+                }
+                return (naoTem == "true") ? "true" : "false";
+            }
+        }
+
+        var skills = ["Javascript", "ReactJS", "React Native"];
+
+        let result = temHabilidade(skills);
+
+        console.log(result);
+    </script>
+
+</body>
+
+</html>
