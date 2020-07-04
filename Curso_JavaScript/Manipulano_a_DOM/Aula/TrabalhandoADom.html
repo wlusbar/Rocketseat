@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EventoInline</title>
+    <title>Trabalhando a DOM</title>
 </head>
 
 <body>
     <div id="app">
         <input type="text" name="nome" id="nome" class="nome"/>
-        <button class="botao1">Pressione</button>
-        <button class="botao2">Pressione</button>
-        <button class="botao3">Pressione</button>
-        <button class="botao4">Pressione</button>
+        <button class="botao1">Pressione1</button>
+        <button class="botao2">Pressione2</button>
+        <button class="botao3">Pressione3</button>
+        <button class="botao4">Pressione4</button>
     </div>
 
 
@@ -21,20 +21,27 @@
 
     <script>
         //Input
-       var inputElement = document.getElementById('nome')//buscando pelo ID
-       var inputElement2 = document.getElementByTagName('input')//buscando pelo tagg. Ele mesmo tendo um so na tela vai retorna um vetor
-       var inputElement3 = document.getElementByClassName('nome')//buscando pela Class. A classe ela pode não ser unica como o Id, retornando assim um vetor
+       var inputElement1 = document.getElementById('nome')//buscando pelo ID
+       var inputElement2 = document.getElementsByTagName('input')//buscando pelo tagg. Ele mesmo tendo um so na tela vai retorna um vetor
+       var inputElement3 = document.getElementsByClassName('nome')//buscando pela Class. A classe ela pode não ser unica como o Id, retornando assim um vetor
        var inputElement4 = document.querySelector('body div#app input')//por outra forma(seletor). Perronde na DOM. 
        var inputElement5 = document.querySelector('input[name=nome]')//por outra forma(seletor). Perronde na DOM. Sempre vai retorna o primeiro a ser encontrado
        var inputElement6 = document.querySelectorAll('body div#app input')//por outra forma(seletor). Perronde na DOM. Retornara todos
 
-       console.log(inputElement);
+       console.log(inputElement1);
+       console.log(inputElement2);
+       console.log(inputElement3);
+       console.log(inputElement4);
+       console.log(inputElement5);
+       console.log(inputElement6);
 
        //Botão1
-var btnElement = document.querySelector('button.botao1');
-btnElement.onclick=function() {
-    alert('botão acionado');
-}
+  
+       var btnElement = document.querySelector('button.botao1');
+       btnElement.onclick = function() {
+               var text = inputElement5.value;
+               alert('botão acionado por : '+text);               
+               }
 
     </script>
 </body>

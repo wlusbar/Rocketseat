@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="PT_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lidando com Elementos</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="nome"  id="nome"/>
+        <button class="botao">Acionar</button>
+        
+    </div>
+
+
+
+
+    <script>
+      var linkElement = document.createElement('a');
+      linkElement.setAttribute('href','https://www.linkedin.com/in/wellingtonluizsb/');
+      linkElement.setAttribute('title','Perfil no Linkedin');
+
+
+      //Para criar um texto para esse link
+      var textElement = document.createTextNode('Acessar perfil Linkedin');
+      linkElement.appendChild(textElement);//Colocar o texto do link como atrobuto
+
+      var posicionarContainerElement = document.querySelector('#app');
+      posicionarContainerElement.appendChild(linkElement);
+
+
+      //Apagar o Input e botao
+      var inputElement = document.querySelector('#nome');
+      posicionarContainerElement.removeChild(inputElement);
+      var btnElement = document.querySelector('.botao');
+      posicionarContainerElement.removeChild(btnElement);
+    </script>
+</body>
+
+</html>
